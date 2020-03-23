@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Emmett Jesrani">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Retirement Calculator</title>
+    </head>
+    <body class="bg-light">
+        <div class="container px-5" style="max-width: 100%;">
+            <div class="py-5 text-center">
+                <h1>Retirement Savings Calculator</h1>
+                <p class="lead">Fill in the fields below to see how much money you'll be able to save for retirement!</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <h4 class="col-sm-4">Initial Funds:</h4>
+                        <input type="number" class="form-control col-sm-7" id="current">
+                    </div>
+                    <div class="row">
+                        <h4 class="col-sm-4">Yearly Savings:</h4>
+                        <input type="number" class="form-control col-sm-7" id="yearly">
+                    </div>
+                    <div class="row">
+                        <h4 class="col-sm-4">Years Until Retirement:</h4>
+                        <input type="number" class="form-control col-sm-7" id="time">
+                    </div>
+                    <div class="row">
+                        <h4 class="col-sm-4">Yearly Spending (Post-retirement):</h4>
+                        <input type="number" class="form-control col-sm-7" id="spending">
+                    </div>
+                    <div class="row">
+                        <h4 class="col-sm-4">Expected Retirement Duration:</h4>
+                        <input type="number" class="form-control col-sm-7" id="retirement">
+                    </div>
+                    <div class="row">
+                        <h4 class="col-sm-4">Yearly ROI (%):</h4>
+                        <input type="number" class="form-control col-sm-7" id="return">
+                    </div>
+                    <button id="calculate">Calculate Savings</button>
+                </div>
+                <div class="col">
+                    <h2 id="result">Total Savings: $---</h2>
+                    <div id="chart">
+                        <canvas id="savingsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script> 
+        <script src="./retirement.js"></script>
+    </footer>
+</html>
